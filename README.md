@@ -1,0 +1,1 @@
+# word_mnemonics_project
