@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mnemonics Project</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style rel = "style.css"></style>
+  <script src = "script.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary rounded-bottom">
+      <a class="navbar-brand text-white" style="margin-left: 10px;font-weight:450">Word Nmenoics Generator</a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText" style="border-top: 0px;">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="btn btn-primary text-white" style="margin-right:10px" onclick="restore()">Recent</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary text-white" onclick="restore(true)">Favourites</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="border border-primary p-3 rounded">
+      <div class="mb-3">
+        <div class="btn-group">
+          <input id="w" class="form-control" value="Science">
+          <div onclick="checkFOP(this.parentNode.children[0].value)" class="btn btn-primary">Detect</div>
+        </div>
+        <div class="form-text text-muted" style="font-size: 15px;">Type the word you need mnemonics for.</div>
+      </div>
+      <div class="mb-3">
+        <select id="s" class="form-control">
+          <option selected value="noun">Noun</option>
+          <option value="verb">Verb</option>
+        </select>
+        <div class="form-text text-muted" style="font-size: 15px;">Select part of speech.</div>
+      </div>
+      <div class="mb-3">
+        <input id="l" class="form-control" style="font-size: 15px;" value="0">
+        <label class="form-text text-muted">Words atleast of length</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input id="c" type="checkbox" class="form-check-input">
+        <label class="form-check-label">Use Synonyms (better option for verbs)</label>
+      </div>
+      <div class="btn-group mb-3 border-primary">
+        <div class="form-check">
+          <input id="bc" type="checkbox" class="form-check-input">
+
+          <label class="form-check-label">Brute force mode</label>
+
+        </div>
+        <select id="brute-t" class="form-control">
+          <option selected value="s">Soft</option>
+          <option value="h">Hard</option>
+          <select>
+      </div>
+
+      <div class="mb3">
+        <button type="button" class="btn btn-primary" onclick="mnemon_html()">Generate</button>
+        <label id="err" class="form-check-label text-black mt-3" style="display:inline-block;margin-left:5px"></label>
+      </div>
+
+    </div>
+    <div id="res" class="mb-3">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
