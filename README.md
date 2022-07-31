@@ -24,5 +24,5 @@ This application tries to find mnemonics starting with same letters for a specif
 - **Hard Mode** : Keeps searching forever until it finds a mnemonic for each letter (`custome_n_of_loops = false`)
 
 ## How to use
-Just open `index.html`
+Just open `index.html` or use [**Live Preview**](https://amirwagih1.github.io/word_mnemonics_project/)
 
